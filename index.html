@@ -328,7 +328,7 @@ function generateTXT() {
         new Date().toISOString().replace(/[:.]/g, "-");
 
     a.href = url;
-    a.download = `task-${timestamp}.txt`;
+    a.download = `task-${timestamp}.json`;
 
     document.body.appendChild(a);
 
