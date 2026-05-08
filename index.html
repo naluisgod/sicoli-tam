@@ -306,13 +306,15 @@ function generateTXT() {
     }
 
     const content =
-`ACTION=create_task
-FILE_UUID=${selectedUUID}
-INSTRUCTIONS=${instructions}
-CREATION_DATE=${today}
-DEADLINE=${deadline}
-IMPORTANCE=${importance}
-TYPE=${taskType}`;
+`{
+  "action": "create_task",
+  "file_uuid": "${selectedUUID}",
+  "instructions": "${instructions}",
+  "creation_date": "${today}",
+  "deadline": "${deadline}",
+  "importance": "${importance}",
+  "type": "${taskType}"
+}`;
 
     document.getElementById("preview").textContent = content;
 
